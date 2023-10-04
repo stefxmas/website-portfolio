@@ -7,10 +7,13 @@
 * Browsers: last 4 version
 */
 
+
 :root {
   --primary-color: #357b70;
   --secondary-color: #e0b354;
   --dark-grey: #2b2b2b;
+  --primary-text-color: #7FFF00;
+  --largerScale: 2.1;
 }
 a {
   color: var(--primary-color);
@@ -83,6 +86,12 @@ a {
   
 }
 .text__skills {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.enjoy__text {
   clear: both;
   display: flex;
   flex-direction: column;
@@ -191,7 +200,33 @@ body {
     /* reduces the opacity of the button to 80% */
     opacity: 0.8;
   }
-
+  .button__download {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    display: inline-block;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the button */
+    background-color: #357b70;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    /* width of the border, type, color */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition-duration: 0.9s;
+    transition-property: opacity;
+  }
+  
+  button:hover,
+  button:focus,
+  .button__download,
+  .button__download {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+  }
 
   
   .button__secondary {

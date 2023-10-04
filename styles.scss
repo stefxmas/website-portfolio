@@ -1,0 +1,45 @@
+$primary-color: #112055;
+$primary-lighter: lighten($primary-color, 10%);
+$primary-darker: darken($primary-color, 10%);
+$secondary-color: #4f9d92;
+$white-color: #fff;
+$box-shadow-color: rgba(0,0,0,0.3);
+
+%box-shared {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 4px 3px 19px 0px $box-shadow-color;
+  color: $white-color;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.box__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+  font-family: sans-serif;
+
+  .box-primary {
+    @extend %box-shared;
+    background-color: $primary-color;
+  }
+
+  .box-primary-lighter {
+    @extend %box-shared;
+    background-color: $primary-lighter;
+  }
+
+  .box-primary-darker {
+    @extend %box-shared;
+    background-color: $primary-darker;
+  }
+
+  .box-secondary {
+    @extend %box-shared;
+    background-color: $secondary-color;
+  }
+}
